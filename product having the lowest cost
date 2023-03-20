@@ -1,0 +1,38 @@
+class  cost
+{
+int pcode;
+String pname;
+int price;
+void display(String x,int y, int z)
+     {
+         pname=x;
+         pcode=y;
+         price=z;
+     }
+ }
+ class pro
+ {
+   public static void main(String[] args)
+   {
+      cost p1=new cost();
+      cost p2=new cost();
+      cost p3=new cost();
+      
+      p1.display("Lava",123,10000);
+      p2.display("realme",153,30000);
+      p3.display("Lava",123,40000);
+      
+      if(p1.price<p2.price && p1.price<p3.price)
+      {
+         System.out.println("Low budget phn is:"+p1.pname);
+      }
+      else if(p2.price<p1.price && p2.price<p3.price)
+      {
+          System.out.println("Low budget phn is:"+p2.pname);
+      }
+      else
+      {
+          System.out.println("Low budget phn is:"+p3.pname);
+      }
+  }
+  }
