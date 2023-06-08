@@ -1,0 +1,52 @@
+import java.util.*;
+class Mp extends Thread
+	{
+	 public void run()
+	 	{
+	 	 int n,i;
+	 	 Scanner sc=new Scanner(System.in);
+	 	 System.out.println("Enter the number:");
+	 	 n=sc.nextInt();
+	 	 for(i=1;i<=10;i++)
+	 	 	{
+	 	 	 System.out.println(i+"*"+n+"="+n*i);
+	 	 	}
+	 	}
+	}
+class Np extends Thread
+	{
+	 public void run()
+	 	{
+	 	 int n,i,c=0,r;
+	 	 Scanner sc=new Scanner(System.in);
+	 	 System.out.println("Enter the number:");
+	 	 n=sc.nextInt();
+	 	 for(i=1;i<=n;i++)
+	 	 	{
+	 	 	r=n%i;
+	 	 	if(r==0)
+	 	 	{
+	 	 	c=c+1;
+	 	 	}
+	 	 	}
+	 	 	if(c==2)
+	 	 	{
+	 	 	 System.out.println("prime");
+	 	 	}
+	 	 	else
+	 	 	{
+	 	 	System.out.println("not prime");
+	 	 	}
+	 	}
+	}	
+		
+class program1
+	{
+	 public static void main(String args[])
+	 	{ 
+	 	 Mp m=new Mp();
+	 	 Np p=new Np();
+	 	 p.start();
+	 	 m.start();
+	 	}	
+	}
